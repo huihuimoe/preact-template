@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "react/prop-types": "ignore"
+  }
+}
