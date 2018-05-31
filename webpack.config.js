@@ -209,7 +209,7 @@ module.exports = {
     setImmediate: false
   },
 
-  devtool: ISDEV ? 'cheap-module-eval-source-map' : 'source-map',
+  devtool: ISDEV ? 'cheap-module-eval-source-map' : false, // 'source-map',
 
   devServer: {
     port: process.env.PORT || 8080,
