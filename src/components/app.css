@@ -1,15 +1,13 @@
 @import 'variables';
 
 html, body {
-	@apply --fullscreen;
+	@apply --fullHeight;
 	padding: 0;
 	margin: 0;
 	background: #FAFAFA;
 	font-family: system-ui;
 	font-weight: 400;
 	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -17,5 +15,5 @@ html, body {
 }
 
 .app {
-	@apply --fullscreen;
+	@apply --fullHeight;
 }
