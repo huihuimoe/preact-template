@@ -33,6 +33,20 @@ module.exports = {
     }
   },
 
+  /*
+   * If you want to load Preact under CDN.
+   * Add these code and add these tags before loading bundle.
+   * <script src='//cdn.jsdelivr.net/npm/preact/dist/preact.min.js'></script>
+   * <script src='//cdn.jsdelivr.net/npm/preact-router/dist/preact-router.min.js'></script>
+   */
+
+  /*
+  externals: {
+    'preact': 'preact',
+    'preact-router': 'preactRouter'
+  },
+  */
+
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -127,7 +141,8 @@ module.exports = {
           test (chunks) {
             const nodeModules = /node_modules/
             const css = /\.css$/
-            return !css.test(chunks.resource) && nodeModules.test(chunks.resource)
+            const miniLib = /offline-plugin|prop-types|fbjs/
+            return !css.test(chunks.resource) && !miniLib.test(chunks.resource) && nodeModules.test(chunks.resource)
           },
           name: 'vendor',
           chunks: 'initial',
