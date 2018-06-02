@@ -8,11 +8,6 @@ import Profile from './profile'
 import style from './app.css'
 
 export default class App extends Component {
-  constructor (porps) {
-    super(porps)
-    this.handleRoute = this.handleRoute.bind(this)
-  }
-
   componentDidMount () {
     const loading = document.querySelector('.loading')
     loading.style.opacity = 0
