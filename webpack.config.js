@@ -61,15 +61,12 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           'presets': [
-            ['@babel/preset-stage-0', {
-              'decoratorsLegacy': true
-            }]
+            ['@babel/preset-es2015', { 'loose': true }],
+            ['@babel/preset-stage-0', { 'decoratorsLegacy': true }]
           ],
           'plugins': [
-            ['@babel/plugin-transform-react-jsx', {
-              'pragma': 'h'
-            }],
-            'transform-class-properties',
+            ['@babel/plugin-transform-react-jsx', { 'pragma': 'h' }],
+            ['@babel/plugin-proposal-class-properties', { 'loose': true }],
             ...(() => ISDEV ? [] : [
               'transform-react-remove-prop-types'
             ])()
